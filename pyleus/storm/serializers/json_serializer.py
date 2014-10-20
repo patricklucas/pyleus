@@ -1,11 +1,6 @@
 """JSON implementation of Pyleus serializer"""
 
-try:
-    import simplejson as json
-    _ = json # pyflakes
-except ImportError:
-    import json
-
+from pyleus.compat import json
 from pyleus.storm import StormWentAwayError
 from pyleus.storm.serializers.serializer import Serializer
 

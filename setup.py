@@ -65,6 +65,10 @@ if sys.version_info < (2, 7):
     # argparse is in the standard library of Python >= 2.7
     extra_install_requires.append("argparse")
 
+    # simplejson has better beformance in Python < 2.6 than the built-in json
+    # module
+    extra_install_requires.append("simplejson")
+
 
 setup(
     name="pyleus",

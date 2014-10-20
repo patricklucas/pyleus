@@ -5,12 +5,7 @@ import logging
 from random import choice
 import time
 
-try:
-    import simplejson as json
-    _ = json # pyflakes
-except ImportError:
-    import json
-
+from pyleus.compat import json
 from pyleus.storm import Spout
 
 
